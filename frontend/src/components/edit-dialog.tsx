@@ -93,7 +93,7 @@ export default function EditDialog({ note }: { note: Note }) {
 
   const handleDelete = (i: any) => {
     if (!formTags) return;
-    setFormTags(formTags.filter((tag: any, index: any) => index !== i));
+    setFormTags(formTags.filter((_tag: any, index: any) => index !== i));
   };
 
   const handleAddition = (tag: any) => {

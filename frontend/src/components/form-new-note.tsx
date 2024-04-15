@@ -115,7 +115,7 @@ export default function FormNewNote() {
 
   const handleDelete = (i: any) => {
     if (!formTags) return;
-    setFormTags(formTags.filter((tag: any, index: any) => index !== i));
+    setFormTags(formTags.filter((_tag: any, index: number) => index !== i));
   };
 
   const handleAddition = (tag: Tag) => {

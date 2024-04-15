@@ -45,7 +45,7 @@ const useTodoStore = create<TodoStore>()(
         try {
           const res = await fetch("http://localhost:8000/api/tags");
           const tags = await res.json();
-          set((state) => ({ tags: [{ id: "all", text: "all" }, ...tags] }));
+          set(() => ({ tags: [{ id: "all", text: "all" }, ...tags] }));
         } catch (error) {
           console.error(error);
         }
@@ -54,7 +54,7 @@ const useTodoStore = create<TodoStore>()(
         try {
           const res = await fetch("http://localhost:8000/api/notes");
           const notes = await res.json();
-          set((state) => ({ notesList: [...notes] }));
+          set(() => ({ notesList: [...notes] }));
         } catch (error) {
           console.error(error);
         }
