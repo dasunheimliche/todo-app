@@ -43,7 +43,7 @@ const useTodoStore = create<TodoStore>()(
         })),
       fetchTags: async () => {
         try {
-          const res = await fetch("http://localhost:8000/api/tags");
+          const res = await fetch("https://todo-app-w1i3.vercel.app/api/tags");
           const tags = await res.json();
           set(() => ({ tags: [{ id: "all", text: "all" }, ...tags] }));
         } catch (error) {
@@ -52,7 +52,7 @@ const useTodoStore = create<TodoStore>()(
       },
       fetchNotes: async () => {
         try {
-          const res = await fetch("http://localhost:8000/api/notes");
+          const res = await fetch("https://todo-app-w1i3.vercel.app/api/notes");
           const notes = await res.json();
           set(() => ({ notesList: [...notes] }));
         } catch (error) {
