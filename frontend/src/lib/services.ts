@@ -1,5 +1,5 @@
 export async function fetchTags(data: any) {
-  const tagsJSON = await fetch("http://localhost:8000/api/tags", {
+  const tagsJSON = await fetch("https://todo-app-w1i3.vercel.app/api/tags", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export async function fetchTags(data: any) {
 }
 
 export async function addNoteToBD(data: any) {
-  const res = await fetch("http://localhost:8000/api/notes", {
+  const res = await fetch("https://todo-app-w1i3.vercel.app/api/notes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -23,7 +23,7 @@ export async function addNoteToBD(data: any) {
 }
 
 export async function updateBdNote(data: any) {
-  const res = await fetch("http://localhost:8000/api/notes", {
+  const res = await fetch("https://todo-app-w1i3.vercel.app/api/notes", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export async function updateBdNote(data: any) {
 }
 
 export async function deleteBdNote(id: string) {
-  const res = await fetch(`http://localhost:8000/api/notes/${id}`, {
+  const res = await fetch(`https://todo-app-w1i3.vercel.app/api/notes/${id}`, {
     method: "DELETE",
   });
 
